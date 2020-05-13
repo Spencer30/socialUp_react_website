@@ -2,7 +2,6 @@ body{
   margin:0;
   padding:0;
   font-family: 'Red Hat Display', sans-serif;
-  background-color: black;
 }
 /* NavBar */
 .navContainer {
@@ -295,11 +294,11 @@ a:hover {
   }
   .pricingCard{
     background-color: white;
-    margin-top: 2rem;
     margin-bottom: 2rem;
   }
   .pricingCardContainer {
     top: 75%;
+    background-color: black;
   }
 }
 
