@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from 'react-router-dom';
 import { useState } from "react";
 import NavLink from "./NavLink";
 
@@ -9,7 +10,7 @@ const NavBar = (props) => {
     }
   return (
     <nav className="navContainer">
-      <h1 className="logo">SocialUp</h1>
+      <Link to="/"><h1 className="logo">SocialUp</h1></Link>
       <ul id="navItems" className="navList list">
         <NavLink toPage="app" title="App" active={props.active === 'App' ? true: false} length={30}/>
         <NavLink toPage="pricing" title="Pricing" active={props.active === 'Pricing' ? true: false} length={50} />

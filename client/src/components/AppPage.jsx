@@ -6,9 +6,11 @@ import { useState } from "react";
 
 let step1Count = 0;
 let step2Count = 0;
+let step3Count = 0;
 const AppPage = () => {
   const [imageOne, setImageOne] = useState(require("../images/Step1a.png"));
   const [imageTwo, setImageTwo] = useState(require("../images/Step2a.png"));
+  const [imageThree, setImageThree] = useState(require('../images/Step3a.png'));
 
   const imageClickOne = () => {
     step1Count++;
@@ -78,6 +80,30 @@ const AppPage = () => {
         break;
     }
   };
+
+  const imageClickThree = () => {
+    step3Count++;
+    switch (step3Count) {
+      case 0:
+        setImageThree(() => require("../images/Step3a.png"));
+        break;
+      case 1:
+        setImageThree(() => require("../images/Step3c.png"));
+        break;
+      case 2:
+        setImageThree(() => require("../images/Step3d.png"));
+        break;
+      case 3:
+        setImageThree(() => require("../images/Step3e.png"));
+        break;
+      case 4:
+        step2Count = 0;
+        setImageThree(() => require("../images/Step3a.png"));
+        break;
+      default:
+        break;
+    }
+  };
   return (
     <div>
       <NavBar active="App" />
@@ -99,7 +125,18 @@ const AppPage = () => {
         bulletThree="Memories are created in-person, creating true friendships"
         image={imageTwo}
         onClick={imageClickTwo}
+        reverse="reverse"
       />
+      <AppSteps 
+        title="Relax"
+        subTitle="Increase participation. Not noise"
+        bulletOne="It's up to you to choose the chats to join"
+        bulletTwo="Only start receiving messages after you join"
+        bulletThree="Filter out the extra noise"
+        image={imageThree}
+        onClick={imageClickThree}
+      />
+        
     </div>
   );
 };
