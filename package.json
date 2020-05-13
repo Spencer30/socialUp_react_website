@@ -1,0 +1,14 @@
+{
+  "name": "socialup_website_react",
+  "version": "1.0.0",
+  "description": "SocialUp rebuilt with React",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Spencer Lyons",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
