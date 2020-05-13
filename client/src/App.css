@@ -21,17 +21,24 @@ body{
   display: flex;
   justify-content: space-evenly;
   width: 35%;
+  align-items: center;
 }
 
 a {
   color: white;
   text-decoration: none;
 }
+a:hover {
+  color: #3ac67f;
+}
 
 .logo {
   color: #3ac67f;
   margin-left: 2rem;
   font-weight: 100;
+}
+.fab {
+  color: #c64b3a
 }
 .fa-bars {
   display: none;
@@ -121,6 +128,33 @@ a {
 .appStore:hover {
   background-color: white;
   color: #c64b3a
+}
+
+/* AppPage */
+.headingContainer {
+  position: absolute;
+  width: 100%;
+  top: 5%;
+  color: white;
+  text-align: center;
+  letter-spacing: 2px;
+  font-weight: 100;
+}
+.avatars {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+}
+
+.steps {
+  display: flex;
+  height: 100vh;
+  justify-content: space-around;;
+  align-items: center;
+}
+
+.stepPhone {
+  height: 70vh;
 }
 
 

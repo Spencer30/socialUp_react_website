@@ -4,7 +4,7 @@ import NavBar from "./NavBar";
 const Home = () => {
   return (
     <div>
-      <NavBar />
+      <NavBar active="home"/>
       <div className="homeContainer">
         <div className="imgOverlay">
           <img
