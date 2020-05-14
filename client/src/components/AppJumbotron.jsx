@@ -15,11 +15,18 @@ const AppJumbotron = () => {
           <h2>Find People Just Like You....</h2>
           <h5 className="appSubTitle" style={{fontWeight:100}}>It can be hard to make new friends, especially in a large group. Find your fit and build <span className="greenText"> real friendships</span></h5>
           </div>
-          <AvatarGroup display={clientWidth < 740 ? false : true} team={1} top="25%" left="5%" name="Basketball Crew"/>
-          <AvatarGroup display={true} team={2} top="65%" left="25%" name="Nature & Hiking"/>
-          <AvatarGroup display={clientWidth < 740 ? false : true} team={3} top="65%" right="25%" name="Yoga & Dance"/>
-          <AvatarGroup display={true} team={3} top="25%" right="50%" name="Happy Hours"/>
-          <AvatarGroup display={true} team={1} top="25%" right="5%" name="Volunteer Team"/>
+          <div style={{position:'absolute', top:'25%', width:'100%', display:'flex', justifyContent:'space-evenly', flexWrap:'wrap'}}>
+          <AvatarGroup team={1} name="Basketball Crew"/>
+          <AvatarGroup team={2} name="Nature & Hiking"/>
+          <AvatarGroup team={3} name="Yoga & Dance"/>
+          <AvatarGroup team={4} name="Happy Hours"/>
+          <AvatarGroup team={5} name="Volunteer Team"/>
+          <AvatarGroup team={6} name="Basketball Crew"/>
+          <AvatarGroup team={5} name="Nature & Hiking"/>
+          <AvatarGroup team={4} name="Yoga & Dance"/>
+          <AvatarGroup team={3} name="Happy Hours"/>
+          <AvatarGroup team={2} name="Volunteer Team"/>
+          </div>
         </div>
         </div>
     )
