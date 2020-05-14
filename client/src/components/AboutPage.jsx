@@ -19,7 +19,7 @@ const AboutPage = () => {
         </div>
         <div style={{position:'absolute', top:'25%', width:'100%'}}>
         <div className="videoContainer">
-        <iframe class="video" title="vimeo-player" src="https://player.vimeo.com/video/329681447" width="100%" frameborder="0" allowfullscreen></iframe>
+        <iframe className="video" title="vimeo-player" src="https://player.vimeo.com/video/329681447" width="100%" frameBorder="0" allowFullScreen></iframe>
         </div>
         </div>
       </div>

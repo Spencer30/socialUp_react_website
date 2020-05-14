@@ -54,6 +54,7 @@ const Pricing = () => {
             bulletThree="Admin Web Management"
             bulletFour=""
             btnText="Contact Us"
+            toPage="/contact"
          />
         </div>
       </div>

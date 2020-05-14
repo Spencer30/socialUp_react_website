@@ -232,6 +232,31 @@ a:hover {
   height: 60vh;
 }
 
+.contactCardContainer {
+  position: absolute;
+  top:15%;
+  width: 100%;
+  color:black;
+  display: flex;
+  justify-content: center;
+}
+
+.cardContactBox{
+  width: 50%;
+  height: 100%;
+  background-color: rgba(255,255,255, .9);
+  border-radius: 25px;
+}
+
+.submitBtn {
+  width: 30%;
+  height: 40px;
+  background-color: transparent;;
+  border: 3px solid #3ac67f;
+  border-radius: 25px;
+  margin: 2rem;
+}
+
 @media (min-width : 920px) and (max-width : 1500px){
   .phone{
       top:300px;

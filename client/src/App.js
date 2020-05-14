@@ -5,6 +5,7 @@ import Home from './components/Home';
 import AppPage from './components/AppPage';
 import Pricing from './components/Pricing';
 import AboutPage from './components/AboutPage';
+import Contact from './components/Contact';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <Route path="/app" exact><AppPage /></Route>
       <Route path="/pricing" exact><Pricing/></Route>
       <Route path="/about" exact><AboutPage/></Route>
+      <Route path="/contact" exact><Contact/></Route>
       </BrowserRouter>
     </div>
   );
