@@ -364,5 +364,12 @@ a:hover {
   .avatarContainer {
     margin: 0rem 2rem;
   }
+  .cardContactBox{
+    width: 90%;
+    height: 100%;
+  }
+  .contactCardContainer {
+    top: 5%
+  }
 }
 
