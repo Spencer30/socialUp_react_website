@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from 'react-router-dom';
 
 const PricingCard = (props) => {
   return (
@@ -16,7 +17,7 @@ const PricingCard = (props) => {
       </ul>
       <div style={{ textAlign: "center" }}>
         <h2 style={{display: props.cost ? 'block' : 'none'}}>{props.cost}</h2>
-        <button style={{borderColor:'#3ac67f'}} className="pricingBtn">{props.btnText}</button>
+        <Link to={props.toPage}><button style={{borderColor:'#3ac67f'}} className="pricingBtn">{props.btnText}</button></Link>
       </div>
     </div>
   );

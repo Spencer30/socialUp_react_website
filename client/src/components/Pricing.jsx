@@ -19,7 +19,7 @@ const Pricing = () => {
             }}
           >
             <h2>Simple, Straight Forward Pricing</h2>
-            <h4>You can have up to <span className="greenText">5</span> circles for free! <span className="greenText">$10</span> per circle after</h4>
+            <h4>You can have up to <span className="redText">5</span> circles for free! <span className="greenText">$10</span> per circle after</h4>
           </div>
           <img
             className="imgBackground"
@@ -45,6 +45,7 @@ const Pricing = () => {
             bulletFour="Robust Chat Options"
             cost="$10/mo per circle"
             btnText="Let's Go"
+            toPage="/"
           />
           <PricingCard 
             title="Custom"
