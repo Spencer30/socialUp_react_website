@@ -1,7 +1,11 @@
 import React from "react";
 import NavBar from "./NavBar";
+import { useState } from "react";
 
 const Home = () => {
+  const [showError, setShowError] = useState(false);
+
+  const appStoreClick = () => setShowError(() => true);
   return (
     <div>
       <NavBar active="home"/>
@@ -21,10 +25,11 @@ const Home = () => {
           <h5 className="subTitle">
             Social chat application for large groups and organizations
           </h5>
-          <button className="appStore">
+          <h5 style={{visibility: showError ? 'visible' : 'hidden', color:'#c64b3a', margin:'.5rem'}}>Sorry, SocialUp is not currently in the app stores.</h5>
+          <button onClick={appStoreClick} className="appStore">
             <i className="fab fa-google-play"></i> Google Play
           </button>
-          <button className="appStore">
+          <button onClick={appStoreClick} className="appStore">
             <i className="fab fa-apple"></i> Apple
           </button>
         </div>

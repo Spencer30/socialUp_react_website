@@ -12,7 +12,7 @@ const AppJumbotron = () => {
             alt="People enjoying coffee"
           />
           <div className="headingContainer">
-          <h2>Find People Just Like You....</h2>
+          <h2>Find Your Circle....</h2>
           <h5 className="appSubTitle" style={{fontWeight:100}}>It can be hard to make new friends, especially in a large group. Find your fit and build <span className="greenText"> real friendships</span></h5>
           </div>
           <div style={{position:'absolute', top:'25%', width:'100%', display:'flex', justifyContent:'space-evenly', flexWrap:'wrap'}}>
