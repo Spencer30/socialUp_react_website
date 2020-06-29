@@ -55,6 +55,9 @@ app.post('/contact', (req, res) => {
 })
 
 
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, './client/build', 'index.html'));
+});
 
 if (port == null || port == "") {
   port = 9000;
