@@ -3,6 +3,9 @@ body{
   padding:0;
   font-family: 'Red Hat Display', sans-serif;
 }
+button {
+  outline: none;
+}
 /* NavBar */
 .navContainer {
   width: 100%;

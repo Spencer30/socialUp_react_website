@@ -4,10 +4,11 @@ const bodyParser = require('body-parser')
 const mysql = require('mysql');
 const dotenv = require('dotenv');
 let port = process.env.PORT;
-dotenv.config({path:'./.env'});
 const app = express();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
+
+dotenv.config({path:'./.env'});
 
 var db = mysql.createPool({
   host     : process.env.DB_HOST,
@@ -19,7 +20,7 @@ var db = mysql.createPool({
 //Connect DB
 db.getConnection((err) => {
   if(err) throw err;
-  console.log('MySql Connected');
+  console.log('MySql Connected');  
 })
 
 app.use(express.static(path.join(__dirname, './client/build')));
@@ -27,9 +28,30 @@ app.get('/', function(req, res) {
   res.sendFile(path.join(__dirname, './client/build', 'index.html'));
 });
 
+
+const removeQuotes = str => {
+  let itemToReplace = /"/gi;
+  let noQuotesStr = str.replace(itemToReplace, '|');
+  return noQuotesStr;
+}
 app.post('/contact', (req, res) => {
-  console.log(req.body.data)
-  res.status(200).send('Your Message Has Been Sent!')
+  try{
+  const data = req.body.data;
+  data.name = removeQuotes(data.name);
+  data.email = removeQuotes(data.email);
+  data.message = removeQuotes(data.message);
+  const query = `INSERT into contact VALUES(DEFAULT, DEFAULT, "${data.name}", "${data.email}", "${data.message}")`;
+  db.query(query, (err, result) => {
+    if(err) throw err;
+    console.log(result)
+    res.status(200).send('Your Message Has Been Sent!')
+
+  })
+} catch(err){
+  console.log(err); 
+  res.status(4044).send(err);
+}
+
 })
 
 
