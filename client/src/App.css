@@ -251,7 +251,8 @@ a:hover {
 .cardContactBox{
   width: 50%;
   height: 100%;
-  background-color: rgba(255,255,255, .9);
+  background-color: rgba(255,255,255, .1);
+  border: 1px solid white;
   border-radius: 25px;
 }
 
@@ -262,6 +263,7 @@ a:hover {
   border: 3px solid #3ac67f;
   border-radius: 25px;
   margin: 2rem;
+  color: white;
 }
 
 @media (min-width : 920px) and (max-width : 1600px){
@@ -276,6 +278,7 @@ a:hover {
   .textContainer{
       top: 10%;
   }
+
 }
 @media (min-width : 671px) and (max-width : 919px){
   .phone{
@@ -298,6 +301,9 @@ a:hover {
   }
   .avatarContainer {
     margin: 0 5rem;
+  }
+  .cardContactBox {
+    width: 70%;
   }
 }
 
@@ -373,6 +379,9 @@ a:hover {
   }
   .contactCardContainer {
     top: 5%
+  }
+  .submitBtn {
+    width: 80%;
   }
 }
 
