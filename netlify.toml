@@ -1,7 +1,7 @@
 # netlify.toml
 
 [build]
-  command = "yarn run build"     # Command to build your React app
+  command = "npm run build"     # Command to build your React app
   publish = "build/"           # Directory to publish (the output of the build process)
 
 [[redirects]]
