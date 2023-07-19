@@ -2,7 +2,7 @@ import React from 'react';
 import AvatarGroup from './AvatarGroup';
 
 const AppJumbotron = () => {
-  let clientWidth = window.innerWidth;
+  // let clientWidth = window.innerWidth;
     return (
         <div className="homeContainer">
         <div className="imgOverlay">
